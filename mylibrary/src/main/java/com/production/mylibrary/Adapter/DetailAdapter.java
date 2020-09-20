@@ -10,15 +10,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.production.mylibrary.CustomModel.ResultItem;
 import com.production.mylibrary.R;
 
 import java.util.List;
 
 public class DetailAdapter extends RecyclerView.Adapter<DetailAdapter.ViewHolder> {
-    List<CustomItem> data;
+    List<ResultItem> data;
     Context context;
 
-    public DetailAdapter(Context context, List<CustomItem> data) {
+    public DetailAdapter(Context context, List<ResultItem> data) {
         this.data = data;
         this.context=context;
     }
@@ -35,7 +36,7 @@ public class DetailAdapter extends RecyclerView.Adapter<DetailAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        CustomItem item= data.get(position);
+        ResultItem item= data.get(position);
         holder.avatar.setImageResource(item.getImgUrl());
         holder.txtDesciption.setText(item.getDetail());
     }

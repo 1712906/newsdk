@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.production.mylibrary.mylibraryMain;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,10 +15,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         try{
-            com.production.mylibrary.mylibrary.setAuher("com.production.newsdk");
-            com.production.mylibrary.mylibrary.setUri(getApplicationContext());
-            Intent intent =new Intent(this,com.production.mylibrary.mylibrary.class);
-            ComponentName componentName=new ComponentName(this,com.production.mylibrary.mylibrary.class);
+            mylibraryMain.setAuher("com.production.newsdk");
+            mylibraryMain.setUri(getApplicationContext());
+            Intent intent =new Intent(this, mylibraryMain.class);
+            ComponentName componentName=new ComponentName(this, mylibraryMain.class);
             intent.setComponent(componentName);
             startActivity(intent);
         }

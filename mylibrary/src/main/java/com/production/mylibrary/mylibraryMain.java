@@ -47,7 +47,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class mylibrary extends AppCompatActivity {
+public class mylibraryMain extends AppCompatActivity {
     ImageView imageView;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     static final int REQUEST_IMAGE_GALARY=2;
@@ -76,7 +76,21 @@ public class mylibrary extends AppCompatActivity {
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.CAMERA,
             Manifest.permission.INTERNET};
-    static final String domain ="https://shrouded-brushlands-68077.herokuapp.com/";
+    static  String domain ="https://shrouded-brushlands-68077.herokuapp.com/";
+    static  String apiKey="NWY0N2FkMjg4ZjFiYmIwYWViZDBkNDdhXzU2Nzg5MTBfSG5mMlJRcDhMbkNuWWhBQw==";
+    static   String email="viethn.it@gmail.com";
+    public static void setDomain(String _domain)
+    {
+        domain=_domain;
+    }
+    public static void setApiKey(String _apiKey)
+    {
+        apiKey=_apiKey;
+    }
+    public static void setEmail(String _email)
+    {
+        email=_email;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,7 +123,7 @@ public class mylibrary extends AppCompatActivity {
                 byte[] image=stream.toByteArray();
 
                 String img_str = Base64.encodeToString(image,Base64.NO_WRAP);
-                String email="viethn.it@gmail.com";
+
                 postImage(email,img_str);
 
 
@@ -131,7 +145,7 @@ public class mylibrary extends AppCompatActivity {
 
     private void postImage(String email, String img_str) {
         pDialog.show();
-        String apiKey="NWY0N2FkMjg4ZjFiYmIwYWViZDBkNDdhXzU2Nzg5MTBfSG5mMlJRcDhMbkNuWWhBQw==";
+
         Log.d("IMAGE STRING",img_str);
         PostMethod(domain,apiKey,email,img_str);
 
