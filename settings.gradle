@@ -1,0 +1,3 @@
+rootProject.name='NewSDK'
+include ':app'
+include ':mylibrary'
