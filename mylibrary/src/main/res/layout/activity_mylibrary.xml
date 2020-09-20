@@ -14,7 +14,7 @@
 
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="150px"
+            android:layout_height="300px"
             android:background="@color/purple"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
             android:layout_width="250px"
             android:layout_height="250px"
             android:layout_marginStart="150px"
-            android:layout_marginTop="16px"
+            android:layout_marginTop="150px"
 
             android:backgroundTint="@color/colorWhite"
             android:src="@drawable/ic_photo_camera_black_24dp"
@@ -56,7 +56,7 @@
             android:id="@+id/btn_updfile"
             android:layout_width="250px"
             android:layout_height="250px"
-            android:layout_marginTop="16px"
+            android:layout_marginTop="150px"
             android:layout_marginEnd="150px"
             android:backgroundTint="@color/colorWhite"
             android:src="@drawable/ic_folder_open_black_24dp"

@@ -301,10 +301,10 @@ public class mylibraryMain extends AppCompatActivity {
                         JsonObject object = response.body();
                         object = object.getAsJsonObject("data");
                         String id = String.valueOf(object.get("_id"));
-                        //Intent intent = new Intent(getApplication(),ResultActivity.class);
-                        //intent.putExtra("idImage",id);
-                        //startActivity(intent);
-                        Toast.makeText(getApplicationContext(),id,Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplication(),MylibraryResult.class);
+                        intent.putExtra("idImage",id);
+                        startActivity(intent);
+
 
                     }
                     catch (Exception ex)
