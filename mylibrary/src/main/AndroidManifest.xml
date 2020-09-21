@@ -16,7 +16,11 @@
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MylibraryResult"></activity>
+        <activity android:name=".MylibraryResult">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.production.mylibrary.mylibraryMain" />
+        </activity>
         <activity android:name=".mylibraryMain" />
 
         <provider
